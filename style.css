@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, sans-serif;
+
+}
+body {
+    height: 100vh;
+    background-image: url("Layer 2.png"); /* Ganti dengan URL gambar latar belakang Anda */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    /* background-color: #4e4e4e;
+    background-position: center;
+    background-attachment: fixed; */
+}
+
+li{
+    list-style: none;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    display: block;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    
+}
+
+a:hover{
+    color: orange;
+}
+
+/* Header */
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    
+    
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 1rem;
+    
+    background-color: rgb(34, 33, 33);
+    opacity: 0.85;
+    box-shadow: 0px 8px 23.78px 5.22px rgba(0, 0, 0, 0.35);
+    margin-top: 70px;
+    z-index: 4;
+    border-radius: 30px;
+    width: 450px;
+    height: 50px;
+    position: static;
+    
+
+}
+
+.navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    margin-right: 50px;
+
+    
+}
+
+.action_btn {
+    margin-right: 50px;
+    background-color: orange;
+    color: #fff;
+    padding:  0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: scale .2 ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: #fff;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+
+
+/*Dropdown Menu*/
+.dropdown_menu{
+    
+    display: none;
+    position: fixed;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 250px;
+
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+}
+
+
+
+
+/*Contact*/
+
+section#contact{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Noto Sans";
+    color: rgb(52, 50, 56);
+}
+
+#contact h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+
+}
+
+.social-media li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+}
+
+.social-media img {
+    width: 50px;
+    height: 50px;
+}
+
+.social-media li :hover {
+    scale: 1.05;
+    cursor: pointer;
+    
+}
+
+
+
+/*Responsive Navbar*/
+@media(max-width: 992px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display:  block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+    #home img {
+        display: block;
+    }
+
+
+    .navbar .logo a {
+        color: #fff;
+    }
+    .navbar .logo a:hover {
+        color: orange;
+    }
+
+    a{
+        text-decoration: none;
+        color: #363636;
+        font-size: 1rem;
+        display: block;
+        transition: background-color 0.3s;
+        font-weight: bold;
+        
+    }
+    
+    a:hover{
+        color: orange;
+    }
+    
+
+   
+
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+}
+
+
+
+/*product*/
+
+/* Produk Container */
+/*product*/
+
+/* Produk Container */
+#product {
+    padding-top: 170px; /* Menambahkan padding di atas untuk memberikan ruang antara navbar dan produk */
+    height: calc(100vh - 60px);
+    text-align: center;
+}
+
+/* Produk Grid */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Produk Item */
+.product {
+    border: 1px solid #dddddd07;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffffff98;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* Mengatur lebar sesuai jumlah produk per baris */
+    box-sizing: border-box;
+}
+
+/* Tampilan pada layar dengan lebar maksimum 768px */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px); /* Menyebarkan produk di sekitar setengah lebar layar */
+    }
+}
+
+/* Tampilan pada layar dengan lebar maksimum 576px */
+@media (max-width: 576px) {
+    .product {
+        width: 100%; /* Menyebarkan produk di seluruh lebar layar */
+    }
+}
+
+
+
+
+main {
+height: calc(100vh - 60px);
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-family: "Noto Sans";
+color: rgb(52, 50, 56);
+}
